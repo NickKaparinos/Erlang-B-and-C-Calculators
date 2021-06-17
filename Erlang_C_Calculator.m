@@ -5,6 +5,7 @@
 %                                         %
 % Uses:                                   %
 % Calculation of P_0, P_T, E_T, E_N, E_M  %
+% and E_W                                 %
 %                                         %
 % Variables:                              %
 % Lambda, mu, N                           %
@@ -28,6 +29,10 @@ disp("P_0 =  " + num2str(P_0));
 %%% Calculate P_T, probability of going in the queue %%%
 P_T = calculate_P_T(lambda, mu, N);
 disp("P_T =  " + num2str(P_T));
+
+%%% Calculate E_W, average time of packets in queue %%%
+E_W = calculate_E_W(lambda, mu, N);
+disp("E_W =  " + num2str(E_W));
 
 %%% Calculate E_T, average time of packets staying in the sytem %%%
 E_T = calculate_E_T(lambda, mu, N);
@@ -70,6 +75,12 @@ function E_m = calculate_E_m(lambda, mu, N)
     
     E_m = A*calculate_P_T(lambda, mu, N)/(N-A);
 
+end
+
+function E_W = calculate_E_W(lambda, mu, N)
+    % Calculate E_w (average time in queue)
+    
+    E_W = calculate_E_m(lambda, mu, N)/lambda;
 end
 
 function E_T = calculate_E_T(lambda, mu, N)
