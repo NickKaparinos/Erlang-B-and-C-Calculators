@@ -1,2 +1,2 @@
-# Erlang-B-Calculator
-Calculator for various probabilities in an Erlang B system in matlab.
+# Erlang-B-and-C-Calculators
+Calculators for various probabilities and values in Erlang B and C systems in matlab.
