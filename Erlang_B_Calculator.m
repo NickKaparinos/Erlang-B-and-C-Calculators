@@ -1,11 +1,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %             Erlang B Calculator         %
 %                                         %
-%              Nick Metalhead             %
+%              Nick Kaparinos             %
 %                                         %
 % Uses:                                   %
 % Calculation of P_B , P_n, P_>=n and     %
 % the average number of users.            %
+%                                         %
+% Variables:                              %
+% Lambda, mu, N                           %
 %                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 clc;
@@ -13,10 +16,10 @@ clear;
 
 %%% Variables %%%
 % Erlangs %
-rho = 3;
+rho = 8;
 
 % Number of lines %
-N = 4;
+N = 10;
 
 %%% Calculate blocking probablity %%%
 P_B = calculate_P_B(rho, N);
